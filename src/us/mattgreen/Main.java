@@ -69,12 +69,12 @@ public class Main {
             
             // Print out most common words and their counts
             System.out.println("The " + NUMBER_OF_WORDS_RANKED + " most common words are: ");
-            System.out.println("Rank\t" + "Word\t\t" + "Occurrences");
+            System.out.println(String.format("%-8s", "Rank") + String.format("%-15s", "Word") + "Occurrences");
             
             int i;
             for (i = 0; i < NUMBER_OF_WORDS_RANKED; i++) {
                 Map.Entry<String, Integer> item = list.get(i);
-                System.out.println((i+1) + "\t" + item.getKey() + "\t\t" + item.getValue());
+                System.out.println(String.format("%-8d", (i+1)) + String.format("%-15s", item.getKey()) + item.getValue());
             }
             
             // display count of one-letter words
